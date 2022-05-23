@@ -6,6 +6,7 @@ const bookModel = new mongoose.Schema({
     title: {
         type: String, required: true, unique: true, trim: true
     },
+    bookCover: {type: String},
     excerpt: {
         type: String, required: true, trim: true
     },
@@ -18,6 +19,7 @@ const bookModel = new mongoose.Schema({
     category: {
         type: String, required: true
     },
+    
     subcategory: {
         type: [String], required: true
     },
@@ -28,7 +30,7 @@ const bookModel = new mongoose.Schema({
         type: Date, default: moment(new Date()).format("YYYY-MM-DD")
     },
     isDeleted: {
-        type: boolean, default: false
+        type: Boolean, default: false
     },
     releasedAt: {
         type: Date, required: true, default: moment(new Date()).format("YYYY-MM-DD")

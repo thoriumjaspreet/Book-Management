@@ -11,7 +11,7 @@ const userModel = new mongoose.Schema({
         type: Number, required: true, unique: true 
     },
     email: { 
-        type: String, required: true, unique: true 
+        type: String, required: true, unique: true //lowercase :true,trim:true
     },
     password: {
         type: String, required: true, minlength: 8, maxlength: 15
